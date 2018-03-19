@@ -23,8 +23,8 @@ button:focus{
     outline: none;
 }
 
-button[disabled="true"]:hover,
-button[disabled="true"]{
+button[disabled]:hover,
+button[disabled]{
     background-color: #29345d;
     opacity: 0.3;
     color: white;
