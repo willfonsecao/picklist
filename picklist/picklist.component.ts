@@ -40,9 +40,11 @@ export class PicklistComponent implements OnInit {
   selected2: Map[] = [];
 
   ngOnInit() {
-    for(let i = 0; i < this.list2.length; i++){
-      if(this.list1.indexOf(this.list2[i])){
-        this.list1.splice(this.list1.indexOf(this.list2[i]),1);
+    if(this.list2){
+      for(let i = 0; i < this.list2.length; i++){
+        if(this.list1.indexOf(this.list2[i])){
+          this.list1.splice(this.list1.indexOf(this.list2[i]),1);
+        }
       }
     }
   }
