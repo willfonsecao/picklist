@@ -41,12 +41,23 @@ export class PicklistComponent implements AfterContentInit{
 
   ngAfterContentInit(){
     if(this.list2){
-      for(let i = 0; i < this.list2.length; i++){
-        if(this.list1.indexOf(this.list2[i])){
-          this.list1.splice(this.list1.indexOf(this.list2[i]),1);
-        }
-      }
+     let indicesInList2 = this.list2.filter(this.comparer(this.list1));
+     this.removeFromList1(indicesInList2);
     }
+  }
+
+  comparer(otherArray){
+    return (current) => {
+      return otherArray.filter((other, i) =>{
+        if(other.value == current.value && other.display == current.display){
+          return i;
+        }
+      }).length == 0;
+    }
+  }
+
+  removeFromList1(indices): void{
+    this.list1 = this.list1.filter((elemento, i) => indices.indexOf(i) === -1);
   }
 
   selectList1(target, index) : void{
@@ -77,7 +88,7 @@ export class PicklistComponent implements AfterContentInit{
         this.list2.push(this.selected1[i].value);
         indices.push(this.selected1[i].key);
     }
-    this.list1 = this.list1.filter((elemento, i) => indices.indexOf(i) === -1);
+    this.removeFromList1(indices);
     this.selected1 = [];
     this.value = this.list2;
   }
