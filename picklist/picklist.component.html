@@ -11,19 +11,19 @@
 
   <div class="box-buttons">
     <div>
-      <button type="button" class="btn btn-default btn-sm mt-1 m-0" (click)="sendToList2()" [disabled]="list1.length == 0">
+      <button type="button" class="btn btn-default btn-sm mt-1 m-0" (click)="sendToList2()" [disabled]="isDisableList1()">
         <i class="fa fa-angle-right" aria-hidden="true"></i>
         <i class="fa fa-angle-down" aria-hidden="true"></i>
       </button>
-      <button type="button" class="btn btn-default btn-sm mt-1 m-0" (click)="sendToList1()" [disabled]="list2.length == 0">
+      <button type="button" class="btn btn-default btn-sm mt-1 m-0" (click)="sendToList1()" [disabled]="isDisableList2()">
         <i class="fa fa-angle-left" aria-hidden="true"></i>
         <i class="fa fa-angle-up" aria-hidden="true"></i>
       </button>
-      <button type="button" class="btn btn-default btn-sm mt-1 m-0" (click)="allToList2()" [disabled]="list1.length == 0">
+      <button type="button" class="btn btn-default btn-sm mt-1 m-0" (click)="allToList2()" [disabled]="isDisableList1()">
         <i class="fa fa-angle-double-right" aria-hidden="true"></i>
         <i class="fa fa-angle-double-down" aria-hidden="true"></i>
       </button>
-      <button type="button" class="btn btn-default btn-sm mt-1 m-0" (click)="allToList1()" [disabled]="list2.length == 0">
+      <button type="button" class="btn btn-default btn-sm mt-1 m-0" (click)="allToList1()" [disabled]="isDisableList2()">
         <i class="fa fa-angle-double-left" aria-hidden="true"></i>
         <i class="fa fa-angle-double-up" aria-hidden="true"></i>
       </button>

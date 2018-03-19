@@ -140,6 +140,14 @@ export class PicklistComponent implements OnInit {
     this.onTouchedCallback = fn;
   }
 
+  isDisableList1(): boolean{
+    return this.list1 != null && this.list1.length == 0;
+  }
+  
+  isDisableList2(): boolean{
+    return this.list2 != null && this.list2.length == 0;
+  }
+
 }
 
 class Map{
