@@ -19,6 +19,17 @@ button:hover{
     color: white;
 }
 
+button:focus{
+    outline: none;
+}
+
+button[disabled="true"]:hover,
+button[disabled="true"]{
+    background-color: #29345d;
+    opacity: 0.3;
+    color: white;
+}
+
 .title{
     background: whitesmoke;
     border-bottom: thin solid #ececec;
