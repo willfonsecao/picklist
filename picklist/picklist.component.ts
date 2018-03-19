@@ -12,7 +12,7 @@ const noop = () => {};
 @Component({
   selector: 'picklist',
   templateUrl: './picklist.component.html',
-  styleUrls: ['./picklist.component.css'],
+  styleUrls: ['./picklist.component.css', '../node_modules/font-awesome/css/font-awesome.min.css'],
   providers: [CUSTOM_INPUT_CONTROL_VALUE_ACCESSOR]
 })
 export class PicklistComponent implements OnInit{
@@ -41,8 +41,43 @@ export class PicklistComponent implements OnInit{
 
   ngOnInit(){
     if(this.list2){
-     this.list1 = this.list1.filter(current => this.list2.indexOf(current) === -1);
+     this.list1 = this.list1.filter(current => { 
+       let result = true;
+        this.list2.forEach(value => {
+          if(this.equalObjects(current, value)) {
+            result = false;
+          }
+        });
+        return result;
+      });
     }
+  }
+
+  equalObjects(object1: any, object2: any): boolean {
+    let result: boolean = true;
+    if(object1 && object2) {
+      const keys1: string[] = Object.keys(object1);
+      const keys2: string[] = Object.keys(object2);
+      if(keys1.length === keys2.length) {
+        keys1.forEach(key => {
+          if(object1[key] instanceof Object) {
+            if(!this.equalObjects(object1[key], object2[key])) {
+              result = false;
+              return;
+            }
+          } else if(object1[key] !== object2[key]) {
+            result = false;
+            return;
+          }
+        });
+      } else {
+        result = false;
+      }
+    } else if(object1 || object2) {
+      result = false;
+    }
+
+    return result;
   }
 
   removeFromList1(indices): void{
