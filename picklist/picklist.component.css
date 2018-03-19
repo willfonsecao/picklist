@@ -1,0 +1,105 @@
+.box-list{
+    min-height: 300px;
+    width: calc(51% - 33px);
+    border: thin solid #29345d;
+    overflow-y: auto;
+    max-height: 300px;
+    float: left;
+}
+
+.title{
+    background: whitesmoke;
+    border-bottom: thin solid #ececec;
+    color: #29345d;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+
+.list{
+    display: grid;
+}
+
+.list p{
+    margin-bottom: 0;
+    padding-bottom: 5px;
+    text-align: center;
+    border-bottom: thin solid #f4f4f4;
+    color: #29345d;
+    cursor: pointer;
+}
+
+.list p:hover{
+    background: #29345d;
+    color: white;
+    border-bottom: thin solid white;
+}
+
+.active{
+    background: #29345d;
+    color: white !important;
+}
+
+.box-buttons{
+    min-height: 300px;
+    max-height: 300px;
+    display: flex;
+    align-items: center;
+    float: left;
+}
+
+.box-buttons div{
+    display: grid;
+    height: 140px;
+}
+
+i[class="fa fa-angle-right"]{
+    display: block;
+}
+
+i[class="fa fa-angle-down"]{
+    display: none;
+}
+
+i[class="fa fa-angle-left"]{
+    display: block;
+}
+
+i[class="fa fa-angle-up"]{
+    display: none;
+}
+
+i[class="fa fa-angle-double-right"]{
+    display: block;
+}
+
+i[class="fa fa-angle-double-down"]{
+    display: none;
+}
+
+i[class="fa fa-angle-double-left"]{
+    display: block;
+}
+
+i[class="fa fa-angle-double-up"]{
+    display: none;
+}
+
+@media (max-width: 803px){
+    .box-list,
+    .box-buttons{float: none !important}
+    .box-list{width: 100%;height: 144px; min-height: 50px;}
+    .box-buttons{min-height: auto;margin-top: 5px;margin-bottom: 5px;}
+    .box-buttons div{display: initial;height: auto;margin: auto !important;}
+    .box-buttons div button{margin-top: 0 !important}
+    i[class="fa fa-angle-right"]{display: none;}
+    i[class="fa fa-angle-down"]{display: block;}
+    i[class="fa fa-angle-left"]{display: none;}
+    i[class="fa fa-angle-up"]{display: block;}
+    i[class="fa fa-angle-double-right"]{display: none;}
+    i[class="fa fa-angle-double-down"]{display: block;}
+    i[class="fa fa-angle-double-left"]{display: none;}
+    i[class="fa fa-angle-double-up"]{display: block;}
+
+}

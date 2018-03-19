@@ -1,0 +1,42 @@
+<div>
+
+  <div class="box-list">
+    <p class="title" *ngIf="title1 != null">{{title1}}</p>
+    <div class="list">
+      <p *ngFor="let n of list1; let i = index" (click)="selectList1($event.target, i)">
+          {{atributoExibicao != null ? n[atributoExibicao] : n.toString()}}
+      </p>
+    </div>
+  </div>
+
+  <div class="box-buttons">
+    <div class="ml-2 mr-2">
+      <button type="button" class="btn btn-default btn-sm mt-1 m-0" (click)="sendToList2()" [disabled]="list1.length == 0">
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+        <i class="fa fa-angle-down" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="btn btn-default btn-sm mt-1 m-0" (click)="sendToList1()" [disabled]="list2.length == 0">
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+        <i class="fa fa-angle-up" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="btn btn-default btn-sm mt-1 m-0" (click)="allToList2()" [disabled]="list1.length == 0">
+        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+        <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+      </button>
+      <button type="button" class="btn btn-default btn-sm mt-1 m-0" (click)="allToList1()" [disabled]="list2.length == 0">
+        <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+        <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="box-list">
+    <p class="title" *ngIf="title2 != null">{{title2}}</p>
+    <div class="list">
+      <p *ngFor="let n of list2; let i = index" (click)="selectList2($event.target, i)">
+          {{atributoExibicao != null ? n[atributoExibicao] : n.toString()}}
+      </p>
+    </div>
+  </div>
+
+</div>
