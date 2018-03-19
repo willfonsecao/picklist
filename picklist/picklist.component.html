@@ -4,7 +4,7 @@
     <p class="title" *ngIf="title1 != null">{{title1}}</p>
     <div class="list">
       <p *ngFor="let n of list1; let i = index" (click)="selectList1($event.target, i)">
-          {{atributoExibicao != null ? n[atributoExibicao] : n.toString()}}
+          {{displayAttibute != null ? n[displayAttibute] : n.toString()}}
       </p>
     </div>
   </div>
@@ -34,7 +34,7 @@
     <p class="title" *ngIf="title2 != null">{{title2}}</p>
     <div class="list">
       <p *ngFor="let n of list2; let i = index" (click)="selectList2($event.target, i)">
-          {{atributoExibicao != null ? n[atributoExibicao] : n.toString()}}
+          {{displayAttibute != null ? n[displayAttibute] : n.toString()}}
       </p>
     </div>
   </div>
