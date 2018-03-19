@@ -7,6 +7,17 @@
     float: left;
 }
 
+button{
+    background: #29345d;
+    color: white;
+    border: none;
+    margin-top: .4em;
+}
+
+button:hover{
+    background: #1c233f;
+}
+
 .title{
     background: whitesmoke;
     border-bottom: thin solid #ececec;
@@ -89,6 +100,7 @@ i[class="fa fa-angle-double-up"]{
 }
 
 @media (max-width: 803px){
+    button{margin-top: 0}
     .box-list,
     .box-buttons{float: none !important}
     .box-list{width: 100%;height: 144px; min-height: 50px;}
