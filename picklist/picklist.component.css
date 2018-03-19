@@ -52,6 +52,8 @@
 .box-buttons div{
     display: grid;
     height: 140px;
+    margin-left: 2em;
+    margin-right: 2em;
 }
 
 i[class="fa fa-angle-right"]{
