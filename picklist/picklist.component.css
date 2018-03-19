@@ -1,3 +1,5 @@
+@import url('../../font-awesome/css/font-awesome.min.css');
+
 .box-list{
     min-height: 300px;
     width: calc(51% - 33px);
