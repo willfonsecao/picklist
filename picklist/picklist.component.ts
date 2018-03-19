@@ -1,4 +1,4 @@
-import { Component, Input, forwardRef, AfterContentInit } from '@angular/core';
+import { Component, Input, forwardRef, AfterContentInit, OnInit } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 
 export const CUSTOM_INPUT_CONTROL_VALUE_ACCESSOR: any = {
@@ -15,7 +15,7 @@ const noop = () => {};
   styleUrls: ['./picklist.component.css'],
   providers: [CUSTOM_INPUT_CONTROL_VALUE_ACCESSOR]
 })
-export class PicklistComponent implements AfterContentInit{
+export class PicklistComponent implements OnInit{
 
   private innerValue: any = '';
   private onTouchedCallback: () => void = noop;
@@ -39,10 +39,9 @@ export class PicklistComponent implements AfterContentInit{
   selected1: Map[] = [];
   selected2: Map[] = [];
 
-  ngAfterContentInit(){
+  ngOnInit(){
     if(this.list2){
      this.list1 = this.list1.filter(current => this.list2.indexOf(current) === -1);
-     //this.removeFromList1(indicesInList2);
     }
   }
 
