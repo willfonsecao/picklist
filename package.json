@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/willfonsecao/picklist.git"
   },
+   "dependencies": {
+	"font-awesome": "^4.7.0"
+   }
   "keywords": [
     "picklist",
     "responsive",
