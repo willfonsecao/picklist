@@ -12,7 +12,7 @@ const noop = () => {};
 @Component({
   selector: 'picklist',
   templateUrl: './picklist.component.html',
-  styleUrls: ['./picklist.component.css', '../node_modules/font-awesome/css/font-awesome.min.css'],
+  styleUrls: ['./picklist.component.css', '../../font-awesome/css/font-awesome.min.css'],
   providers: [CUSTOM_INPUT_CONTROL_VALUE_ACCESSOR]
 })
 export class PicklistComponent implements OnInit{
