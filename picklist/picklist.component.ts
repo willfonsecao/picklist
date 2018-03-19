@@ -82,7 +82,7 @@ export class PicklistComponent implements OnInit {
     this.value = this.list2;
   }
 
-  sendoToList1() : void{
+  sendToList1() : void{
     let indices: number[] = [];
     for(let i = 0; i < this.selected2.length; i++){
         this.list1.push(this.selected2[i].value);
