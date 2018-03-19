@@ -1,6 +1,6 @@
 {
   "name": "picklist-wf",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This is a full responsive PickList",
   "main": "index.js",
   "scripts": {
