@@ -1,5 +1,5 @@
 {
-  "name": "picklist",
+  "name": "picklist-wf",
   "version": "1.0.0",
   "description": "This is a full responsive PickList",
   "main": "index.js",
@@ -10,9 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/willfonsecao/picklist.git"
   },
-   "dependencies": {
-	"font-awesome": "^4.7.0"
-   }
+  "dependencies": {
+    "font-awesome": "^4.7.0"
+  },
   "keywords": [
     "picklist",
     "responsive",

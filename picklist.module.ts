@@ -7,8 +7,10 @@ import { PicklistComponent } from 'picklist';
   ],
   exports: [
     PicklistComponent
-
   ],
+  imports: [
+	CommonModule
+  ]
   providers: [
    
   ]
