@@ -41,18 +41,8 @@ export class PicklistComponent implements AfterContentInit{
 
   ngAfterContentInit(){
     if(this.list2){
-     let indicesInList2 = this.list2.filter(this.comparer(this.list1));
-     this.removeFromList1(indicesInList2);
-    }
-  }
-
-  comparer(otherArray){
-    return (current) => {
-      return otherArray.filter((other, i) =>{
-        if(other.value == current.value && other.display == current.display){
-          return i;
-        }
-      }).length == 0;
+     this.list1 = this.list1.filter(current => this.list2.indexOf(current) === -1);
+     //this.removeFromList1(indicesInList2);
     }
   }
 
