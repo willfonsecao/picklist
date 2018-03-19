@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { PicklistComponent } from 'picklist';
+import { CommonModule } from '@angular/common';
+import { PicklistComponent } from './picklist/picklist.component';
 
 @NgModule({
   declarations: [
@@ -9,8 +10,8 @@ import { PicklistComponent } from 'picklist';
     PicklistComponent
   ],
   imports: [
-	CommonModule
-  ]
+	  CommonModule
+  ],
   providers: [
    
   ]
