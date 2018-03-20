@@ -38,3 +38,4 @@ list2: any[] = listB;
     </picklist>
   </div>
 ```
+![alt pick](https://image.ibb.co/hinPvH/picklist.jpg)
