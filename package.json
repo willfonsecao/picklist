@@ -24,7 +24,6 @@
     "core-js": "^2.4.1",
     "date-fns": "^1.28.5",
     "font-awesome": "^4.7.0",
-    "ngx-slimscroll": "^3.3.3",
     "node-sass": "^4.5.3",
     "popper.js": "^1.12.5",
     "rxjs": "^5.4.2",
